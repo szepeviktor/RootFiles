@@ -1,0 +1,4 @@
+# robots.txt for static-only CDN
+User-agent: *
+Disallow: /*/$
+Allow: /static
