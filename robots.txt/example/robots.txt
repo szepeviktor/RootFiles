@@ -1,0 +1,14 @@
+# MJ12 bot
+User-agent: MJ12bot
+Crawl-delay: 10
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# All *other* agents
+User-agent: *
+Disallow: /wp-admin/
+
+Sitemap: http://www.example.com/sitemap.xml
+#Sitemap: http://www.example.com/sitemap.xml.gz
+#Sitemap: http://www.example.com/sitemap_index.xml
+#Sitemap: http://www.example.com/sitemap.txt
