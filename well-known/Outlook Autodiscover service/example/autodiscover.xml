@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
+    <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+        <User>
+            <DisplayName>John Doe</DisplayName>
+        </User>
+        <Account>
+            <AccountType>email</AccountType>
+            <Action>settings</Action>
+            <Image>http://path.to.image.com/image.jpg</Image>
+            <ServiceHome>http://web.page.com</ServiceHome>
+            <Protocol>
+                <Type>SMTP | IMAP</Type>
+                <Server>mail.contoso.com</Server>
+                <Port>110</Port>
+                <LoginName>johndoe@domain</LoginName>
+                <DomainRequired>on</DomainRequired>
+                <DomainName></DomainName>
+                <SPA>off</SPA>
+                <SSL>on | off</SSL>
+                <AuthRequired>on</AuthRequired>
+                <UsePOPAuth>off</UsePOPAuth>
+                <SMTPLast>off</SMTPLast>
+            </Protocol>
+        </Account>
+    </Response>
+</Autodiscover>
