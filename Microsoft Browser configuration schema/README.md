@@ -4,4 +4,4 @@ Creating custom tiles for IE11 websites
 Browser configuration schema reference
     https://msdn.microsoft.com/en-us/library/ie/dn320426%28v=vs.85%29.aspx
 
-`<meta name="msapplication-config" content="none" />`
+Disable: `<meta name="msapplication-config" content="none" />`

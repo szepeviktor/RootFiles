@@ -1,10 +1,10 @@
-# MJ12 bot
+# Allow MJ12 bot to crawl all content except /wp-admin/ and /wp-includes/ once in 10 seconds
 User-agent: MJ12bot
 Crawl-delay: 10
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 
-# All *other* agents
+# All *other* agents to crawl all content except /wp-admin/
 User-agent: *
 Disallow: /wp-admin/
 

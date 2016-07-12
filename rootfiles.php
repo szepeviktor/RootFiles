@@ -43,6 +43,10 @@ function rootfiles_generate( $path ) {
     </Response>
 </Autodiscover>
 ';
+    $robotstxt = 'User-Agent: *
+Disallow: /
+# Please stop sending further requests.
+';
 
     switch ( $path ) {
         case '/autodiscover/autodiscover.xml':
@@ -65,6 +69,10 @@ function rootfiles_generate( $path ) {
             );
             header( 'Content-type: application/xml' );
             echo rootfiles_render( $autodiscover_tpl, $autodiscover );
+            break;
+        case '/robots.txt':
+            header( 'Content-type: text/plain' );
+            echo $robotstxt;
             break;
         default:
             // Unknown path
