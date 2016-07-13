@@ -1,14 +1,10 @@
 # Files in the document root of the webserver
 
-@TODO
+@TODO file versions
 
-- /bare-bone content
-- full fledged /example
-
-### Apache alias files
-
-1. Generate `find . -name ".alias" -exec cat "{}" ";"`
-1. Substitute `@@ROOTFILE-GENERATOR@@` e.g. `/path/to/rootfiles.php`
+- `documentation`
+- `/bare-bone/`
+- `/example/`
 
 ### 404 handling
 

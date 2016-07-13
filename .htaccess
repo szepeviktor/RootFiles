@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond "%{REQUEST_FILENAME}" !-f
+    RewriteCond "%{REQUEST_URI}" "=/crossdomain.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/sitemap.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-72x72.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-76x76.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-114x114.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-120x120.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-144x144.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-152x152.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-180x180.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-192x192.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon-precomposed.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-touch-icon.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/browserconfig.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/robots.txt" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/favicon.ico" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/labels.rdf" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/.well-known/autoconfig/mail/config-v1.1.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/apple-app-site-association" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/.well-known/apple-app-site-association" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/autodiscover/autodiscover.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=/.well-known/assetlinks.json"
+    RewriteRule "^" "/rootfiles.php" [L]
+</IfModule>
