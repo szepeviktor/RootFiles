@@ -1,18 +1,24 @@
-# Files in the document root of the webserver
+# Serve missing files in the document root of the webserver.
 
-@TODO file versions
+It is a single PHP class. Apache configuration files are included.
 
-- index.htm
-- `documentation`
+This repository's structure is modular. See **Adding a new root file**
 
-_example/ desc.
+### Usage
 
-bin usage...
+```bash
+# Clone this repo
+git clone https://github.com/szepeviktor/RootFiles.git
+cd RootFiles/
+# Generate Apache configuration files
+cd bin/
+generate-apache-httpd-configs.sh /path/to/php-class
+```
 
-### Apache configuration files
+### Download
 
-usage vhost
-usage .htaccess
+If you don't have access to Apache vhost config
+just download the [current release](https://github.com/szepeviktor/RootFiles/releases/latest) (`.htaccess` and `rootfiles.php`).
 
 ### 404 handling
 
@@ -20,30 +26,39 @@ See https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/404
 
 Based on https://github.com/mathiasbynens/small
 
-
 ### Other root files
 
-- `_File upload warning`
-- PHP user config http://php.net/manual/en/configuration.file.per-user.php
-- Apache https directory config: Security Compression Browser cache
-- Default placeholder page (index.html) link projects
-    https://github.com/ahmadfiroz/Coming-Soon-page
-    http://pietrasiak.com/tf/clouds/
-    https://github.com/JoshM33k/PhysicalMedia-ComingSoon
-    elements...
+- If users are allowed to upload files to any directory use an upload warning file found in `/_File upload warning`
+- PHP user configuration `.user.ini` http://php.net/manual/en/configuration.file.per-user.php
+- Apache httpd directory configuration `.htaccess` (with rewrite rules, security, compression, browser cache etc. settings)
 
-### Skeleton for README
+### Adding a new root file
 
-\# Full Name with Company and Function
+1. Add a `README.md` file (example below)
+1. Add all the paths with leading slash in `.path`
+1. Create the file with minimal contents with full path (could be in a subdirectory)
+1. Add `generator.phps` with case statement (path, content type, content) you may use the `%%FILE:file.ext%%` placeholder for base64 encoded file contents
+1. Optionally add full example in the `_example` directory
 
-| Data          |       |
-| ------------- | ----- |
-| file name     | file.ext |
+```markdown
+# Full Name with Company and Function
+
+Small description.
+
+| Data          |               |
+| ------------- | ------------- |
+| file name     | file.ext      |
+| type          | JSON          |
 | specification | [Title](/URL) |
 | tutorial      | [Title](/URL) |
 
-HTML head link
+### HTML head link
 
-```html
 <link rel="name" />
+
+Or: Must be in the document root.
 ```
+
+### Misc.
+
+[PR-s](https://github.com/szepeviktor/RootFiles/pulls) are welcome!

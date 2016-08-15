@@ -2,10 +2,10 @@
 #
 # Generate Apache config.
 #
-# VERSION       : 0.1.0
+# VERSION       : 0.1.1
 
-# Default document root
-DOC_ROOT="${1:-/var/www}"
+# Location of the generator script, could be just above the document root
+GENERATOR_PATH="${1:-/var/www}"
 
 set -e
 
@@ -13,14 +13,17 @@ set -e
 [ -f "../LICENSE" ]
 
 # Generate vhost configuration file
-find .. -maxdepth 2 -type f -name ".path" -exec cat "{}" ";" \
-    | sed -e "s|^.*\$|    Alias \"&\" ${DOC_ROOT}/rootfiles.php|" \
-    > ../dist/rootfiles.conf
+{
+    echo "    # RootFiles"
+    find .. -maxdepth 2 -type f -name ".path" -exec cat "{}" ";" \
+        | sed -e "s|^.*\$|    Alias \"&\" ${GENERATOR_PATH}/rootfiles.php|"
+} > ../dist/rootfiles.conf
 echo "rootfiles.conf - OK"
 
 # Generate directory configuration file (.htaccess)
 {
     cat <<EOF
+# RootFiles
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /

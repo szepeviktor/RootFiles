@@ -2,7 +2,7 @@
 #
 # Generate rootfiles.php
 #
-# VERSION       :0.1.0
+# VERSION       :0.2.0
 # PLACEHOLDER   :%%FILE:path/file.ext%%
 
 set -e
@@ -20,6 +20,7 @@ set -e
             # Skip if contains no file placeholder
             if ! grep -q "%%FILE:[^%]\+%%" "$PHP_SOURCE"; then
                 # Echo PHP source
+                echo "            // $(basename "$(dirname "$PHP_SOURCE")")"
                 cat "$PHP_SOURCE"
                 continue
             fi
@@ -36,6 +37,7 @@ set -e
 
                 BASE64="$(base64 -w 0 < "$FILE")"
                 # Echo PHP source
+                echo "            // $(basename "$(dirname "$PHP_SOURCE")")"
                 sed -e "s|%%FILE:[^%]\+%%|${BASE64}|" < "$PHP_SOURCE"
             done <<< "$FILES"
     done

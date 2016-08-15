@@ -1,9 +1,22 @@
 # Microsoft Browser configuration schema
 
-Creating custom tiles for IE11 websites
-https://msdn.microsoft.com/en-us/library/ie/dn455106.aspx
+Browser configuration files can be used to define pinned site customizations.
 
-Browser configuration schema reference
-https://msdn.microsoft.com/en-us/library/ie/dn320426%28v=vs.85%29.aspx
+| Data          |               |
+| ------------- | ------------- |
+| file name     | browserconfig.xml |
+| type          | XML               |
+| specification | [Schema reference](https://msdn.microsoft.com/en-us/library/ie/dn320426%28v=vs.85%29.aspx) |
+| tutorial      | [Creating custom tiles](https://msdn.microsoft.com/en-us/library/ie/dn455106.aspx) |
 
-Disable: `<meta name="msapplication-config" content="none" />`
+### HTML head link
+
+```html
+<meta name="msapplication-config" content="/path/to/IEconfig.xml" />
+```
+
+To stop using the configuration file, set the content attribute to `none`.
+
+```html
+<meta name="msapplication-config" content="none" />
+```

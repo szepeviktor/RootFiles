@@ -1,11 +1,19 @@
 <?php
+/**
+ * Handle requests for important files in the document root which get downloaded without links.
+ *
+ * @package RootFiles
+ * @version 1.0.0
+ * @license MIT
+ * @author Viktor Szépe <viktor@szepe.net>
+ */
 
 new RootFiles();
 
 /**
  * Serve root files.
  */
-class RootFiles {
+final class RootFiles {
 
     /**
      * Process request URI.

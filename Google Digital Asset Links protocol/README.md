@@ -1,5 +1,12 @@
 # Google Digital Asset Links
 
-`assetlinks.json`
+The Digital Asset Links protocol and API enable an app or website to make public,
+verifiable statements about other apps or websites.
 
-https://developers.google.com/digital-asset-links/v1/getting-started
+| Data          |               |
+| ------------- | ------------- |
+| file name     | assetlinks.json |
+| type          | JSON            |
+| specification | [Digital Asset Links](https://developers.google.com/digital-asset-links/v1/getting-started) |
+
+Must be in the `/.well-known` directory.

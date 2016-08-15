@@ -13,7 +13,7 @@
         <frequency>30</frequency>
      </badge>
      <notification>
-        <polling-uri  src="1.xml"/>
+        <polling-uri src="1.xml"/>
         <polling-uri2 src="2.xml"/>
         <polling-uri3 src="3.xml"/>
         <polling-uri4 src="4.xml"/>

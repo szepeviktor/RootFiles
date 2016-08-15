@@ -8,7 +8,7 @@
     }
 
     /**
-     * Render template.
+     * Render a template.
      */
     private function render( $template, $values ) {
 
