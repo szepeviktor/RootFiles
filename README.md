@@ -1,8 +1,10 @@
-# Serve missing files in the document root of the webserver.
+# Serve files missing from the document root
 
-It is a single PHP class. Apache configuration files are included.
+Not all projects have the resources to hand-craft every *root file*.
 
-This repository's structure is modular. See **Adding a new root file**
+This single PHP class generates all of them for you. Apache configuration files are also included.
+
+This repository is modular. See **Adding a new root file** section below.
 
 ### Usage
 
@@ -15,10 +17,16 @@ cd bin/
 generate-apache-httpd-configs.sh /path/to/php-class
 ```
 
+Include `rootfiles.conf` in your site's configuration
+and place `rootfiles.php` at the desired path.
+
+You're done!
+
 ### Download
 
 If you don't have access to Apache vhost config
-just download the [current release](https://github.com/szepeviktor/RootFiles/releases/latest) (`.htaccess` and `rootfiles.php`).
+just download the [current release](https://github.com/szepeviktor/RootFiles/releases/latest) (`.htaccess` and `rootfiles.php`)
+and place them in your site's document root.
 
 ### 404 handling
 
@@ -29,6 +37,7 @@ Based on https://github.com/mathiasbynens/small
 ### Other root files
 
 - If users are allowed to upload files to any directory use an upload warning file found in `/_File upload warning`
+- Site verification files for Google, Bing and Baidu
 - PHP user configuration `.user.ini` http://php.net/manual/en/configuration.file.per-user.php
 - Apache httpd directory configuration `.htaccess` (with rewrite rules, security, compression, browser cache etc. settings)
 
