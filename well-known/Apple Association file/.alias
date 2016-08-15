@@ -1,2 +1,0 @@
-Alias "/apple-app-site-association" "@@ROOTFILE-GENERATOR@@"
-Alias "/.well-known/apple-app-site-association" "@@ROOTFILE-GENERATOR@@"
