@@ -13,6 +13,7 @@ DOTPATHS="$(find -maxdepth 2 -type f -name ".path")"
 [ -n "$DOTPATHS" ]
 while read -r DOTPATH; do
     while read -r FILE; do
+        echo "Testing ${FILE} ..."
         HEADERS="$(wget -q -S -O /dev/null "http://localhost${FILE}" 2>&1)"
 
         # Common headers

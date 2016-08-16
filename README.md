@@ -1,5 +1,7 @@
 # Serve files missing from the document root
 
+[![Build Status](https://travis-ci.org/szepeviktor/RootFiles.svg?branch=master)](https://travis-ci.org/szepeviktor/RootFiles)
+
 Not all projects have the resources to hand-craft every *root file*.
 
 This single PHP class generates all of them for you. Apache configuration files are also included.
