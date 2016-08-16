@@ -2,7 +2,7 @@
 #
 # Generate rootfiles.php
 #
-# VERSION       :0.2.0
+# VERSION       :0.2.1
 # PLACEHOLDER   :%%FILE:path/file.ext%%
 
 set -e
@@ -15,7 +15,7 @@ set -e
     cat "rootfiles-head.phps"
 
     # List all PHP generators
-    find .. -maxdepth 2 -type f -name "generator.phps" -print0 \
+    find .. -maxdepth 2 -type f -name "generator.phps" -print0 | sort -z \
         | while read -r -d $'\0' PHP_SOURCE; do
             # Skip if contains no file placeholder
             if ! grep -q "%%FILE:[^%]\+%%" "$PHP_SOURCE"; then

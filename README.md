@@ -68,6 +68,6 @@ Small description.
 Or: Must be in the document root.
 ```
 
-### Misc.
+### Contribution
 
 [PR-s](https://github.com/szepeviktor/RootFiles/pulls) are welcome!

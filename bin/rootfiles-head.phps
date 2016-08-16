@@ -3,7 +3,7 @@
  * Handle requests for important files in the document root which get downloaded without links.
  *
  * @package RootFiles
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  * @author Viktor Szépe <viktor@szepe.net>
  */
@@ -18,9 +18,9 @@ final class RootFiles {
     /**
      * Process request URI.
      */
-    public function __contruct() {
+    public function __construct() {
 
-        if ( ! in_array( 'REQUEST_URI', $_SERVER ) ) {
+        if ( ! array_key_exists( 'REQUEST_URI', $_SERVER ) ) {
             return;
         }
 
@@ -34,7 +34,7 @@ final class RootFiles {
     public function generate( $path ) {
 
         // Don't index these contents
-        header( 'X-Robots-Tag: noindex, nofollow' );
+        header( 'X-Robots-Tag: noindex, nofollow', true );
 
         switch ( $path ) {
             // Case parts from "generator.phps" files

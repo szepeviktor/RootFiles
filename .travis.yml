@@ -1,0 +1,20 @@
+language: php
+sudo: required
+dist: trusty
+php:
+  - '5.6'
+  - '7.0'
+  - nightly
+
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq -y libapache2-mod-php5
+
+install:
+ - sudo cp -f test/000-default.conf /etc/apache2/sites-available/
+ - sudo cp dist/rootfiles.conf /etc/apache2/conf-available/
+ - sudo cp dist/rootfiles.php /var/www/
+ - sudo service apache2 restart
+
+script:
+ - test/apache.sh
