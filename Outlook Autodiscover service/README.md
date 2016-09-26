@@ -6,7 +6,8 @@ Autodiscover in Outlook is an XML file that is put in one of two locations, base
 | ------------- | ------------- |
 | file name     | autodiscover.xml |
 | type          | XML              |
-| specification | [Title](https://technet.microsoft.com/en-us/library/cc511507.aspx) |
+| specification | [Automatically configure user accounts](https://technet.microsoft.com/en-us/library/cc511507.aspx) |
+| tool          | [Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/) |
 
 Must be in the `/autodiscover` directory.
 

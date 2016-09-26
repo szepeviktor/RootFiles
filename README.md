@@ -16,11 +16,12 @@ git clone https://github.com/szepeviktor/RootFiles.git
 cd RootFiles/
 # Generate Apache configuration files
 cd bin/
-generate-apache-httpd-configs.sh /path/to/php-class
+generate-apache-httpd-configs.sh /directory/for/generator-script
 ```
 
-Include `rootfiles.conf` in your site's configuration
-and place `rootfiles.php` at the desired path.
+Comment out aliases for **existing files**,
+include `dist/rootfiles.conf` in your site's configuration
+and place `dist/rootfiles.php` at the specified path.
 
 You're done!
 
@@ -36,10 +37,18 @@ See https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/404
 
 Based on https://github.com/mathiasbynens/small
 
+### See results
+
+Search access log for served root files
+
+```bash
+grep -E "GET ($(sed -ne 's|^\s*Alias "\(.\+\)" /.\+$|\1|p' rootfiles.conf|paste -d"|" -s) HTTP/)" /var/log/apache2/access.log
+```
+
 ### Other root files
 
 - If users are allowed to upload files to any directory use an upload warning file found in `/_File upload warning`
-- Site verification files for Google, Bing and Baidu
+- Site verification files for Google, Bing, Yandex and Baidu
 - PHP user configuration `.user.ini` http://php.net/manual/en/configuration.file.per-user.php
 - Apache httpd directory configuration `.htaccess` (with rewrite rules, security, compression, browser cache etc. settings)
 
