@@ -3,11 +3,13 @@
     RewriteEngine On
     RewriteBase /
     RewriteCond "%{REQUEST_FILENAME}" !-f
+    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-57x57.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-72x72.png" [OR]
-    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-76x76.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-114x114.png" [OR]
-    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-120x120.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-144x144.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-60x60.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-76x76.png" [OR]
+    RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-120x120.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-152x152.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-180x180.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-192x192.png" [OR]

@@ -3,7 +3,7 @@
  * Handle requests for important files in the document root which get downloaded without links.
  *
  * @package RootFiles
- * @version 1.0.1
+ * @version 1.0.2
  * @license MIT
  * @author Viktor Szépe <viktor@szepe.net>
  */

@@ -3,7 +3,7 @@
  * Handle requests for important files in the document root which get downloaded without links.
  *
  * @package RootFiles
- * @version 1.0.1
+ * @version 1.0.2
  * @license MIT
  * @author Viktor Szépe <viktor@szepe.net>
  */
@@ -50,11 +50,13 @@ final class RootFiles {
                 echo base64_decode( 'ewogImFwcGxpbmtzIjogewogICJhcHBzIjogW10sCiAgImRldGFpbHMiOiBbXQogfQp9Cg==' );
                 break;
             // Apple Webpage icon
+            case '/apple-touch-icon-57x57.png':
             case '/apple-touch-icon-72x72.png':
-            case '/apple-touch-icon-76x76.png':
             case '/apple-touch-icon-114x114.png':
-            case '/apple-touch-icon-120x120.png':
             case '/apple-touch-icon-144x144.png':
+            case '/apple-touch-icon-60x60.png':
+            case '/apple-touch-icon-76x76.png':
+            case '/apple-touch-icon-120x120.png':
             case '/apple-touch-icon-152x152.png':
             case '/apple-touch-icon-180x180.png':
             case '/apple-touch-icon-192x192.png':
