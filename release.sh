@@ -3,6 +3,8 @@
 # Make a release.
 #
 
+# Bump version in bin/rootfiles-head.phps
+
 set -e
 
 (
@@ -20,3 +22,5 @@ mkdir RootFiles
 cp dist/.htaccess dist/rootfiles.php RootFiles/
 zip -q -r "$RELEASE_ARCHIVE" RootFiles/
 rm -rf RootFiles/
+
+echo "OK."

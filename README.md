@@ -37,7 +37,7 @@ See https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/404
 
 Based on https://github.com/mathiasbynens/small
 
-### See results
+### See the results
 
 Search access log for served root files
 
@@ -51,6 +51,17 @@ grep -E "GET ($(sed -ne 's|^\s*Alias "\(.\+\)" /.\+$|\1|p' rootfiles.conf|paste 
 - Site verification files for Google, Bing, Yandex and Baidu
 - PHP user configuration `.user.ini` http://php.net/manual/en/configuration.file.per-user.php
 - Apache httpd directory configuration `.htaccess` (with rewrite rules, security, compression, browser cache etc. settings)
+
+### Alternative solution
+
+```apache
+RewriteEngine On
+RewriteRule "^/apple-app-site-association$" - [R=200]
+<Location "/apple-app-site-association">
+    # Inline response body
+    ErrorDocument 200 '{ "applinks": { "apps": [], "details": [] } }'
+</Location>
+```
 
 ### Adding a new root file
 
