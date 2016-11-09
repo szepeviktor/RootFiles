@@ -13,15 +13,14 @@ This repository is modular. See **Adding a new root file** section below.
 ```bash
 # Clone this repo
 git clone https://github.com/szepeviktor/RootFiles.git
-cd RootFiles/
+cd RootFiles/bin/
 # Generate Apache configuration files
-cd bin/
 generate-apache-httpd-configs.sh /directory/for/generator-script
 ```
 
-Comment out aliases for **existing files**,
-include `dist/rootfiles.conf` in your site's configuration
-and place `dist/rootfiles.php` at the specified path.
+Comment out aliases for **existing files** in `dist/rootfiles.conf`,
+include it in your site's configuration
+and copy `dist/rootfiles.php` at the specified path.
 
 You're done!
 

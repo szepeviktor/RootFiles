@@ -8,6 +8,7 @@ Browser configuration files can be used to define pinned site customizations.
 | type          | XML               |
 | specification | [Schema reference](https://msdn.microsoft.com/en-us/library/ie/dn320426%28v=vs.85%29.aspx) |
 | tutorial      | [Creating custom tiles](https://msdn.microsoft.com/en-us/library/ie/dn455106.aspx) |
+| builder       | [Build a site tile](http://www.buildmypinnedsite.com/) |
 
 ### HTML head link
 
