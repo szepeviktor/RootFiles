@@ -1,0 +1,10 @@
+Do Not Track Compliance Policy
+
+Version 1.0
+
+This domain complies with user opt-outs from tracking via the "Do Not Track"
+or "DNT" header  [http://www.w3.org/TR/tracking-dnt/].  This file will always
+be posted via HTTPS at https://example-domain.com/.well-known/dnt-policy.txt
+to indicate this fact.
+
+https://raw.githubusercontent.com/EFForg/dnt-policy/master/dnt-policy-1.0.txt

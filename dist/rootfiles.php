@@ -3,7 +3,7 @@
  * Handle requests for important files in the document root which get downloaded without links.
  *
  * @package RootFiles
- * @version 1.0.2
+ * @version 1.0.3
  * @license MIT
  * @author Viktor Szépe <viktor@szepe.net>
  */
@@ -64,6 +64,11 @@ final class RootFiles {
             case '/apple-touch-icon.png':
                 header( 'Content-type: image/png' );
                 echo base64_decode( 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAACklEQVQI12NoAAAAggCB3UNq9AAAAABJRU5ErkJggg==' );
+                break;
+            // EFF Do Not Track Policy
+            case '/.well-known/dnt-policy.txt':
+                header( 'Content-type: text/plain' );
+                echo base64_decode( 'RG8gTm90IFRyYWNrIENvbXBsaWFuY2UgUG9saWN5CgpWZXJzaW9uIDEuMAoKVGhpcyBkb21haW4gY29tcGxpZXMgd2l0aCB1c2VyIG9wdC1vdXRzIGZyb20gdHJhY2tpbmcgdmlhIHRoZSAiRG8gTm90IFRyYWNrIgpvciAiRE5UIiBoZWFkZXIgIFtodHRwOi8vd3d3LnczLm9yZy9UUi90cmFja2luZy1kbnQvXS4gIFRoaXMgZmlsZSB3aWxsIGFsd2F5cwpiZSBwb3N0ZWQgdmlhIEhUVFBTIGF0IGh0dHBzOi8vZXhhbXBsZS1kb21haW4uY29tLy53ZWxsLWtub3duL2RudC1wb2xpY3kudHh0CnRvIGluZGljYXRlIHRoaXMgZmFjdC4KCmh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9FRkZvcmcvZG50LXBvbGljeS9tYXN0ZXIvZG50LXBvbGljeS0xLjAudHh0Cg==' );
                 break;
             // Favorite icon
             case '/favicon.ico':

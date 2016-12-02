@@ -44,6 +44,10 @@ Search access log for served root files
 grep -E "GET ($(sed -ne 's|^\s*Alias "\(.\+\)" /.\+$|\1|p' rootfiles.conf|paste -d"|" -s) HTTP/)" /var/log/apache2/access.log
 ```
 
+### List of Well-Known URIs
+
+http://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
+
 ### Other root files
 
 - If users are allowed to upload files to any directory use an upload warning file found in `/_File upload warning`

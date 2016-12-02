@@ -24,6 +24,7 @@
     RewriteCond "%{REQUEST_URI}" "=autodiscover/autodiscover.xml" [OR]
     RewriteCond "%{REQUEST_URI}" "=.well-known/assetlinks.json" [OR]
     RewriteCond "%{REQUEST_URI}" "=labels.rdf" [OR]
+    RewriteCond "%{REQUEST_URI}" "=.well-known/dnt-policy.txt" [OR]
     RewriteCond "%{REQUEST_URI}" "=crossdomain.xml" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-app-site-association" [OR]
     RewriteCond "%{REQUEST_URI}" "=.well-known/apple-app-site-association"
