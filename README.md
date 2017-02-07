@@ -15,7 +15,7 @@ This repository is modular. See **Adding a new root file** section below.
 git clone https://github.com/szepeviktor/RootFiles.git
 cd RootFiles/bin/
 # Generate Apache configuration files
-generate-apache-httpd-configs.sh /directory/for/generator-script
+./generate-apache-httpd-configs.sh /directory/for/generator-script
 ```
 
 Comment out aliases for **existing files** in `dist/rootfiles.conf`,
