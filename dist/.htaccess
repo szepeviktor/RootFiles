@@ -3,6 +3,17 @@
     RewriteEngine On
     RewriteBase /
     RewriteCond "%{REQUEST_FILENAME}" !-f
+    RewriteCond "%{REQUEST_URI}" "=.well-known/dnt-policy.txt" [OR]
+    RewriteCond "%{REQUEST_URI}" "=.well-known/autoconfig/mail/config-v1.1.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=crossdomain.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=.well-known/assetlinks.json" [OR]
+    RewriteCond "%{REQUEST_URI}" "=browserconfig.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=autodiscover/autodiscover.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=favicon.ico" [OR]
+    RewriteCond "%{REQUEST_URI}" "=robots.txt" [OR]
+    RewriteCond "%{REQUEST_URI}" "=apple-app-site-association" [OR]
+    RewriteCond "%{REQUEST_URI}" "=.well-known/apple-app-site-association" [OR]
+    RewriteCond "%{REQUEST_URI}" "=labels.rdf" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-57x57.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-72x72.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-114x114.png" [OR]
@@ -15,18 +26,8 @@
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-192x192.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon-precomposed.png" [OR]
     RewriteCond "%{REQUEST_URI}" "=apple-touch-icon.png" [OR]
-    RewriteCond "%{REQUEST_URI}" "=.well-known/autoconfig/mail/config-v1.1.xml" [OR]
+    RewriteCond "%{REQUEST_URI}" "=ads.txt" [OR]
     RewriteCond "%{REQUEST_URI}" "=sitemap.xml" [OR]
-    RewriteCond "%{REQUEST_URI}" "=sitemap_index.xml" [OR]
-    RewriteCond "%{REQUEST_URI}" "=browserconfig.xml" [OR]
-    RewriteCond "%{REQUEST_URI}" "=favicon.ico" [OR]
-    RewriteCond "%{REQUEST_URI}" "=robots.txt" [OR]
-    RewriteCond "%{REQUEST_URI}" "=autodiscover/autodiscover.xml" [OR]
-    RewriteCond "%{REQUEST_URI}" "=.well-known/assetlinks.json" [OR]
-    RewriteCond "%{REQUEST_URI}" "=labels.rdf" [OR]
-    RewriteCond "%{REQUEST_URI}" "=.well-known/dnt-policy.txt" [OR]
-    RewriteCond "%{REQUEST_URI}" "=crossdomain.xml" [OR]
-    RewriteCond "%{REQUEST_URI}" "=apple-app-site-association" [OR]
-    RewriteCond "%{REQUEST_URI}" "=.well-known/apple-app-site-association"
+    RewriteCond "%{REQUEST_URI}" "=sitemap_index.xml"
     RewriteRule "^" "/rootfiles.php" [END]
 </IfModule>

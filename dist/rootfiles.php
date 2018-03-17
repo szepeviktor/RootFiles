@@ -80,6 +80,11 @@ final class RootFiles {
                 header( 'Content-type: application/json' );
                 echo base64_decode( 'W3t9XQo=' );
                 break;
+            // IAB Authorized Digital Sellers
+            case '/ads.txt':
+                header( 'Content-type: text/plain' );
+                echo base64_decode( 'IyAvYWRzLnR4dAojCiMgVGhpcyB3ZWJzaXRlcydzIGhhcyBubyBhZHZlcnRpc2VtZW50IGludmVudG9yeSB0byBwdXJjaGFzZQojIGZyb20uIFRoZXJlZm9yZSBubyBhZHZlcnRpc2luZyBzeXN0ZW0gaXMgYXV0aG9yaXplZCB0bwojIGJ1eSBhbmQgc2VsbCBhZHMgb24gdGhlIHdlYnNpdGUgYW5kIG5vIGF1dGhvcml6ZWQgc2VsbGVycwojIG9yIHJlc2VsbGVycyBsaXN0ZWQgaW4gL2Fkcy50eHQgZmlsZS4K' );
+                break;
             // Microsoft Browser configuration schema
             case '/browserconfig.xml':
                 header( 'Content-type: application/xml' );

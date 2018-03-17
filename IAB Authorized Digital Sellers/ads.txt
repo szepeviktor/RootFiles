@@ -1,0 +1,6 @@
+# /ads.txt
+#
+# This websites's has no advertisement inventory to purchase
+# from. Therefore no advertising system is authorized to
+# buy and sell ads on the website and no authorized sellers
+# or resellers listed in /ads.txt file.
