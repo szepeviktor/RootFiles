@@ -1,0 +1,7 @@
+# Security Policies for example.com
+Contact: mailto:admin@szepe.net
+Encryption: https://keybase.io/szepeviktor/pgp_keys.asc
+Acknowledgements:
+Policy:
+Signature:
+Hiring:
