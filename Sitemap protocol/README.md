@@ -1,4 +1,4 @@
-# Full Name with Company and Function
+# Sitemap protocol
 
 Small description.
 
