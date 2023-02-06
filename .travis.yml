@@ -19,7 +19,7 @@ jobs:
 
 before_install:
  - "sudo apt-get update -qq"
- - "sudo apt-get install -qq -y libapache2-mod-php"
+ - "sudo apt-get install -qq -y apache2 libapache2-mod-php"
 
 install:
  - "sudo cp -f test/000-default.conf /etc/apache2/sites-available/"
