@@ -1,4 +1,4 @@
-# Full Name with Company and Function
+# Gen Digital / Norton brand
 
 Norton Safe Web analyzes and rates websites to see how they affect your device.
 
