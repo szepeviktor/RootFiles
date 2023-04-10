@@ -1,6 +1,6 @@
 # Serve files missing from the document root
 
-[![Build Status](https://travis-ci.org/szepeviktor/RootFiles.svg?branch=master)](https://travis-ci.org/szepeviktor/RootFiles)
+[![Build Status](https://app.travis-ci.com/szepeviktor/RootFiles.svg?branch=master)](https://app.travis-ci.com/szepeviktor/RootFiles)
 
 Not all projects have the resources to hand-craft every *root file*.
 
@@ -8,7 +8,7 @@ This single PHP class generates all of them for you. Apache configuration files 
 
 This repository is modular. See **Adding a new root file** section below.
 
-### Usage
+## Usage
 
 ```bash
 # Clone this repo
@@ -24,19 +24,19 @@ and copy `dist/rootfiles.php` at the specified path.
 
 You're done!
 
-### Download
+## Download
 
 If you don't have access to Apache vhost config
 just download the [current release](https://github.com/szepeviktor/RootFiles/releases/latest) (`.htaccess` and `rootfiles.php`)
 and place them in your site's document root.
 
-### 404 handling
+## 404 handling
 
 See https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/404-adaptive.php
 
 Based on https://github.com/mathiasbynens/small
 
-### See the results
+## See the results
 
 Search access log for served root files
 
@@ -44,18 +44,18 @@ Search access log for served root files
 grep -E "GET ($(sed -ne 's|^\s*Alias "\(.\+\)" /.\+$|\1|p' rootfiles.conf|paste -d"|" -s) HTTP/)" /var/log/apache2/access.log
 ```
 
-### List of Well-Known URIs
+## List of Well-Known URIs
 
 http://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 
-### Other root files
+## Other root files
 
 - If users are allowed to upload files to any directory use an upload warning file found in `/_File upload warning`
 - Site verification files for Google, Bing, Yandex and Baidu
 - PHP user configuration `.user.ini` http://php.net/manual/en/configuration.file.per-user.php
 - Apache httpd directory configuration `.htaccess` (with rewrite rules, security, compression, browser cache etc. settings)
 
-### Alternative solution
+## Alternative solution
 
 ```apache
 RewriteEngine On
@@ -65,6 +65,10 @@ RewriteRule "^/apple-app-site-association$" - [R=200]
     ErrorDocument 200 '{ "applinks": { "apps": [], "details": [] } }'
 </Location>
 ```
+
+## Contribution
+
+[PR-s](https://github.com/szepeviktor/RootFiles/pulls) are welcome!
 
 ### Adding a new root file
 
@@ -92,7 +96,3 @@ Small description.
 
 Or: Must be in the document root.
 ```
-
-### Contribution
-
-[PR-s](https://github.com/szepeviktor/RootFiles/pulls) are welcome!
